@@ -1,0 +1,56 @@
+
+<link rel="stylesheet" href="memes.css">
+<h1>MEME GENERATOR</h1>
+<ol>
+    <li>Choose image or video file from HD</li>
+    <li>Insert two texts of your choice</li>
+    <li>Hit Submit Meme!</li>
+    <li>***Refresh page to start over</li>
+</ol>
+<body>
+
+<h2>
+</h2>
+
+<div id="display_image">
+
+
+<!-- I used https://www.codewithlinda.com/blog/upload-picture-on-the-web for these block of code -->
+<div class='form'>
+    <label>Image
+        <input type='file' accept="image/*" class="profile-img"placeholder="" id="profile-img">
+     </label>
+     <label>or</label>
+     <label>Video
+        <input type='file' accept="video/*" placeholder="" class="profile-vid" >
+     </label></div> 
+    <header class="header">
+        <picture class="profile">
+            <img src=" ">
+
+        </picture>
+        
+            <video class="vid"
+               
+                src=" " loop="true" autoplay>
+               
+            </video>
+        
+    </header>
+<!-- UP TO HERE -->
+    <span> </span>
+<form>
+    <input type = 'text' id="user-input" name='textbox'/>
+    <!-- <button id="topbutton">Submit</button> -->   
+    <input type = 'text' id="user-input2" name='textbox'/>
+    <label>Meme text here</label>
+</form>
+<form><div><button id="bottombutton">CREATE MEME</button></div> </form>
+<form><div><button id ='rembutton'>REMOVE MEME</button></div></form>
+  
+
+<script src = 'memes.js' ></script>
+
+
+
+</body>
