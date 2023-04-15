@@ -1,0 +1,49 @@
+* {
+  /* box-sizing: border-box; */
+}
+
+:focus {
+ /* TODO */
+}
+
+body {
+
+background-color: goldenrod;
+}
+
+input {
+ /* TODO */
+}
+
+.search-container {
+position :absolute;
+top: 45%;
+left: 45%;
+}
+.search-container input,
+.search-container .suggestions {
+  /* TODO */
+}
+.search-container input {
+ /* TODO */
+}
+.search-container .suggestions {
+   /* TODO */
+}
+
+ul {
+  /* TODO */
+}
+ul.has-suggestions {
+  /* TODO */
+}
+ul li {
+  /* TODO */
+}
+ul li:hover {
+  /* TODO */
+}
+
+input {
+   /* TODO */
+}
