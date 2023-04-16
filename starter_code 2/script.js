@@ -110,14 +110,13 @@ function addSelect2(){
 		let el = document.createElement("option");
 		el.textContent = opt;
 		el.value = opt;
-		select.append(el);
+		select.appendChild(el);
 	} return select 
 }
 
 let bttn=document.querySelector('input#fruit')
+bttn.addEventListener('dblclick', (event) => {event.preventDefault(); addSelect2(); })
 
-bttn.addEventListener('keyup', (event) => {event.preventDefault(); addSelect2()})
-
-
-
-
+let button=document.querySelector('button')
+button.addEventListener('click', (e) => {e.preventDefault(); let element = document.querySelector("option");
+element.remove() });
