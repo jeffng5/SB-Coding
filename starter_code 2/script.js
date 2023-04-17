@@ -3,9 +3,9 @@
 
 
 const fruits = ['Apple', 'Apricot', 'Avocado', 'Banana', 'Bilberry', 'Blackberry', 'Blackcurrant', 'Blueberry', 'Boysenberry', 'Currant', 'Cherry', 'Coconut', 'Cranberry', 'Cucumber', 'Custard apple', 'Damson', 'Date', 'Dragonfruit', 'Durian', 'Elderberry', 'Feijoa', 'Fig', 'Gooseberry', 'Grape', 'Raisin', 'Grapefruit', 'Guava', 'Honeyberry', 'Huckleberry', 'Jabuticaba', 'Jackfruit', 'Jambul', 'Juniper berry', 'Kiwifruit', 'Kumquat', 'Lemon', 'Lime', 'Loquat', 'Longan', 'Lychee', 'Mango', 'Mangosteen', 'Marionberry', 'Melon', 'Cantaloupe', 'Honeydew', 'Watermelon', 'Miracle fruit', 'Mulberry', 'Nectarine', 'Nance', 'Olive', 'Orange', 'Clementine', 'Mandarine', 'Tangerine', 'Papaya', 'Passionfruit', 'Peach', 'Pear', 'Persimmon', 'Plantain', 'Plum', 'Pineapple', 'Pomegranate', 'Pomelo', 'Quince', 'Raspberry', 'Salmonberry', 'Rambutan', 'Redcurrant', 'Salak', 'Satsuma', 'Soursop', 'Star fruit', 'Strawberry', 'Tamarillo', 'Tamarind', 'Yuzu']
-
-const fruitsId = Array.from(fruits, val => 'name: '+ val);
-console.log(fruitsId)
+const cleanFruits = fruits.map(fruit=> fruit.toLowerCase());
+console.log(cleanFruits[0].length)
+console.log(typeof(cleanFruits[0]))
 // function search(str) {
 // 	let results = [];
 
@@ -33,25 +33,17 @@ console.log(fruitsId)
 // input.addEventListener('keyup', searchHandler);
 // suggestions.addEventListener('click', useSuggestion);
 
-const cleanFruits = fruits.map(fruit=> fruit.toLowerCase());
-console.log(cleanFruits[0].length)
-console.log(typeof(cleanFruits[0]))
-
-
-
-
-
-function addSelect(){
+// function addSelect(){
 	
-	let re = /\D+/
-	let option2= document.createElement('option')
-	let searchTerm=document.querySelector('input#fruit.InputField').value
-	let textField= document.querySelector('p')		
-	let option = document.querySelector('select')
-	textField.append(option)
-	option.appendChild(option2)
-	cleanFruits.filter(function(val, i, arr){if (val[0] == searchTerm[0]) {
-		return option2.append(cleanFruits[i])}})}
+// 	let re = /\D+/
+// 	let option2= document.createElement('option')
+// 	let searchTerm=document.querySelector('input#fruit.InputField').value
+// 	let textField= document.querySelector('p')		
+// 	let option = document.querySelector('select')
+// 	textField.append(option)
+// 	option.appendChild(option2)
+// 	cleanFruits.filter(function(val, i, arr){if (val[0] == searchTerm[0]) {
+// 		return option2.append(cleanFruits[i])}})}
 
 	// return option2}
 	
@@ -61,13 +53,13 @@ function addSelect(){
 // 	if (e.target.value==='abcdefghijklmnopqrstuvwxyz')  { 
 // 		addselect()}});
 
-function inputText(){
-	let searchTerm=document.querySelector('input#fruit').value
-	let parentBox= document.querySelector('.suggestions ul')
-	let lis= document.createElement('li')
-	parentBox.append(lis)
-	lis.append(searchTerm)
-	return lis}
+// function inputText(){
+// 	let searchTerm=document.querySelector('input#fruit').value
+// 	let parentBox= document.querySelector('.suggestions ul')
+// 	let lis= document.createElement('li')
+// 	parentBox.append(lis)
+// 	lis.append(searchTerm)
+// 	return lis}
 
 
 		

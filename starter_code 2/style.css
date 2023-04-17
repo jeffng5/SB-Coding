@@ -1,4 +1,5 @@
-* {
+div {
+  color: whitesmoke;
   /* box-sizing: border-box; */
 }
 
@@ -7,34 +8,41 @@
 }
 
 body {
-  background: goldenrod;
+  background: linear-gradient(to right, forestgreen , teal, aqua);
 }
 
 input {
- /* TODO */
+  color: white;
+  font-size: medium;
 }
 
 .search-container {
-position :absolute;
-top: 45%;
-left: 45%;
+  color: whitesmoke;
+  position :relative;
+  top: 350px;
+  left: 500px;
 }
 .search-container input,
 .search-container .suggestions {
-  /* TODO */
+  font-size: medium;
+  
+  
 }
 .search-container input {
- /* TODO */
+  background: linear-gradient(to right, forestgreen , teal, aqua);
+  color: white;
+  font-size: medium;
 }
 .search-container .suggestions {
-   /* TODO */
+
 }
 
-ul {
-  /* TODO */
+option {
+  background-color: darkcyan;
+  color: whitesmoke;
 }
-ul.has-suggestions {
-  /* TODO */
+#fruit {
+  color: whitesmoke;
 }
 ul li {
   /* TODO */
@@ -43,6 +51,13 @@ ul li:hover {
   /* TODO */
 }
 
-input {
-   /* TODO */
+input#fruit{
+   color:white;
+}
+
+button {
+  border-radius : 8px;
+  padding: 10px;
+  background-color: blue;
+  color: whitesmoke;
 }
