@@ -1,7 +1,7 @@
 // const input = document.querySelector('#fruit');
 // const suggestions = document.querySelector('.suggestions ul');
 
-
+//cleaning the fruit list
 const fruits = ['Apple', 'Apricot', 'Avocado', 'Banana', 'Bilberry', 'Blackberry', 'Blackcurrant', 'Blueberry', 'Boysenberry', 'Currant', 'Cherry', 'Coconut', 'Cranberry', 'Cucumber', 'Custard apple', 'Damson', 'Date', 'Dragonfruit', 'Durian', 'Elderberry', 'Feijoa', 'Fig', 'Gooseberry', 'Grape', 'Raisin', 'Grapefruit', 'Guava', 'Honeyberry', 'Huckleberry', 'Jabuticaba', 'Jackfruit', 'Jambul', 'Juniper berry', 'Kiwifruit', 'Kumquat', 'Lemon', 'Lime', 'Loquat', 'Longan', 'Lychee', 'Mango', 'Mangosteen', 'Marionberry', 'Melon', 'Cantaloupe', 'Honeydew', 'Watermelon', 'Miracle fruit', 'Mulberry', 'Nectarine', 'Nance', 'Olive', 'Orange', 'Clementine', 'Mandarine', 'Tangerine', 'Papaya', 'Passionfruit', 'Peach', 'Pear', 'Persimmon', 'Plantain', 'Plum', 'Pineapple', 'Pomegranate', 'Pomelo', 'Quince', 'Raspberry', 'Salmonberry', 'Rambutan', 'Redcurrant', 'Salak', 'Satsuma', 'Soursop', 'Star fruit', 'Strawberry', 'Tamarillo', 'Tamarind', 'Yuzu']
 const cleanFruits = fruits.map(fruit=> fruit.toLowerCase());
 console.log(cleanFruits[0].length)
@@ -90,13 +90,14 @@ function remove() {
 	let select = document.querySelector("select");
 	select.remove()
 }
-	
+// getting a search term from user input	
 function addSelect2(){
 	let searchTerm=document.querySelector('input#fruit').value	
 	const variable = cleanFruits.filter(function(val){return val.includes(searchTerm)});
 
 	let select = document.querySelector("select");
 	
+//display the matching items	
 	for(let i = 0; i < variable.length; i++) {
 		let opt = variable[i];
 		let el = document.createElement("option");
@@ -105,7 +106,7 @@ function addSelect2(){
 		select.appendChild(el);
 	} return select 
 }
-
+// the two event listeners 
 let bttn=document.querySelector('input#fruit')
 bttn.addEventListener('dblclick', (event) => {event.preventDefault(); addSelect2(); })
 
