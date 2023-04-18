@@ -96,13 +96,14 @@ function addSelect2(){
 	const variable = cleanFruits.filter(function(val){return val.includes(searchTerm)});
 
 	let select = document.querySelector("select");
-	
-//display the matching items	
-	for(let i = 0; i < variable.length; i++) {
+
+	//display the matching items **not original code, forgot to cite	
+for(let i = 0; i < variable.length; i++) {
 		let opt = variable[i];
 		let el = document.createElement("option");
 		el.textContent = opt;
 		el.value = opt;
+		el.id =opt
 		select.appendChild(el);
 	} return select 
 }
@@ -113,3 +114,13 @@ bttn.addEventListener('dblclick', (event) => {event.preventDefault(); addSelect2
 let button=document.querySelector('button')
 button.addEventListener('click', (e) => {e.preventDefault(); let element = document.querySelector("option");
 element.remove() });
+
+
+const select=document.querySelector('select')
+select.className = 'choice'
+select.addEventListener("click", (e) => {e.preventDefault(); let output=document.querySelector('input'); 
+output.innerHTML = `<input type="text" name="fruit" id="fruit" placeholder="${e.target.value}">`
+return output })
+
+
+
