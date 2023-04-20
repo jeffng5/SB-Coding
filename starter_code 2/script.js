@@ -118,7 +118,7 @@ element.remove() });
 	
 // code to place the dropdown selection into the searchBar *Not fully working* 
 let output=document.querySelector('input')
-console.log(output.innerHTML='')
+output.value=''
 // let lis= document.createElement('li')
 let select=document.querySelector('select')
 select.className = 'choice'
