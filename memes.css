@@ -131,7 +131,7 @@ top: 800px
     left: 220;
 }
 
-#display_image img{
+/* #display_image img{
     position: absolute;
     left: 55px; 
     padding: 10px;
@@ -139,9 +139,13 @@ top: 800px
     width: 400px;
     display: block;
     float: left;
-}
+} */
 
 
-#display_image{
-    float: 'left'
+div.memes {
+    height: auto; 
+    width: 33.3%; 
+    max-width: 300px; 
+    max-height: 300px;
+    float: left;
 }

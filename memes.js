@@ -19,7 +19,10 @@ function uploadImage(){
   // document.getElementById('display_image').appendChild(img);
   let frame=document.getElementById('display_image');
   let frame2= document.createElement('img');
-  frame.appendChild(frame2).setAttribute('src', val)
+  let divs= document.createElement('div')
+  divs.innerHTML = '<div class= memes></div>'
+  frame.appendChild(divs)
+  divs.appendChild(frame2).setAttribute('src', val)
   return frame2;
 }
 
