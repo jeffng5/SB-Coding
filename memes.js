@@ -13,13 +13,13 @@ bottomtext.addEventListener("click", function(e) {e.preventDefault(); addPunchLi
 
 function uploadImage(){
   let val = document.querySelector('#imagename').value
-  src= val;
-  img = document.querySelector('img');
-  img.src = src;
-  document.getElementById('display_image').appendChild(img);
+  // src= val;
+  // img = document.querySelector('img');
+  // img.src = src;
+  // document.getElementById('display_image').appendChild(img);
   let frame=document.getElementById('display_image');
   let frame2= document.createElement('img');
-  frame.appendChild(frame2).setAttribute('src')
+  frame.appendChild(frame2).setAttribute('src', val)
   return frame2;
 }
 
@@ -32,9 +32,14 @@ meme.addEventListener('click', (e) => {
 
 let delvid=document.getElementById('rembutton')
 delvid.addEventListener('click', function(e) {
-    let vidtag=document.getElementsByClassName('vid')
-    let imgtag=document.getElementsByClassName('profile')
-    vidtag.remove()
-    imgtag.remove()
+    photo=document.getElementsByTagName('img')
+    photo.remove()
+
+
+
+    // let vidtag=document.getElementsByClassName('vid')
+    // let imgtag=document.getElementsByClassName('profile')
+    // vidtag.remove()
+    // imgtag.remove()
 
 })
