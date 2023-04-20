@@ -86,8 +86,9 @@ console.log(typeof(cleanFruits[0]))
 // button.addEventListener("click", function(e){e.preventDefault(); 
 // 	addSelect()});
 
+// remove dropdown selection
 function remove() {
-	let select = document.querySelector("select");
+	let select = document.getELementsByClassName("choice");
 	select.remove()
 }
 // getting a search term from user input	
@@ -105,7 +106,7 @@ for(let i = 0; i < variable.length; i++) {
 		el.value = opt;
 		el.id =opt
 		select.appendChild(el);
-	} return select 
+	} return select
 }
 // the two event listeners 
 let bttn=document.querySelector('input#fruit')
@@ -114,13 +115,22 @@ bttn.addEventListener('dblclick', (event) => {event.preventDefault(); addSelect2
 let button=document.querySelector('button')
 button.addEventListener('click', (e) => {e.preventDefault(); let element = document.querySelector("option");
 element.remove() });
-
-
-const select=document.querySelector('select')
+	
+// code to place the dropdown selection into the searchBar *Not fully working* 
+let output=document.querySelector('input')
+console.log(output.innerHTML='')
+// let lis= document.createElement('li')
+let select=document.querySelector('select')
 select.className = 'choice'
-select.addEventListener("click", (e) => {e.preventDefault(); let output=document.querySelector('input'); 
-output.innerHTML = `<input type="text" name="fruit" id="fruit" placeholder="${e.target.value}">`
+select.addEventListener("click", (e) => {e.preventDefault();
+output.setAttribute('placeholder', e.target.value)
+// output.innerHTML = ""
+// lis.innerHTML = `${e.target.value}`;
+// output.appendChild(lis)
 return output })
+// selectedOption= document.getElementsByClassName('choice').value
+// document.getElementById('fruit')=selectedOption})
+
 
 
 
